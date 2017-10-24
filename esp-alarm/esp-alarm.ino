@@ -122,11 +122,6 @@ void loop() {
   }
 }
 
-void toggleBuzzer() {
-  digitalWrite(buzzerPin, !buzzerState);
-  buzzerState = !buzzerState;
-}
-
 void buzzer(int state) {
   digitalWrite(buzzerPin, state);
   buzzerState = state;
