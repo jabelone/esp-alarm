@@ -22,7 +22,7 @@ long checkRemoved = 0;
 const int buzzerPin = D4;
 const char* deviceName = "Electronics_Bench";
 //const String secretKey = "nope"; // Used for jaimyn's slack api proxy
-const String secretKey = "3717ea73-b793-4dd0-8d9a-3603d44ded19"; // Used for jaimyn's slack api proxy
+const String secretKey = "<jaimyns api key>"; // Used for jaimyn's slack api proxy
 
 // Program variables
 int buzzerState = 0;
@@ -136,10 +136,10 @@ void makeRequest(String url) {
   HTTPClient http;
 
   Serial.print("[HTTP] begin...\n");
-  http.begin("https://jabelone.lib.id/security-bot@dev/send_message/" + url, "E6 28 AC 9C 36 89 29 0B 4C 08 76 F3 5E CD 4C C6 A8 1B F3 85"); //HTTPS
+  http.begin("https://URL/" + url, "E6 28 AC 9C 36 89 29 0B 4C 08 76 F3 5E CD 4C C6 A8 1B F3 85"); //HTTPS
   //http.begin(url); //HTTP
 
-  Serial.print("[HTTP] GETing https://jabelone.lib.id/security-bot@dev/send_message/" + url + " ...\n");
+  Serial.print("[HTTP] GETing URL" + url + " ...\n");
   // start connection and send HTTP header
   int httpCode = http.GET();
 
